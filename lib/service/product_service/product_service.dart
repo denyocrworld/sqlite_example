@@ -2,10 +2,6 @@ import 'package:sqlite_example/service/database_service/database_service.dart';
 
 class ProductService {
   static createTable() async {
-    await DB.execute("""
-      DROP TABLE products;
-    """);
-
     await DB.execute(
       """
       CREATE TABLE IF NOT EXISTS products 
