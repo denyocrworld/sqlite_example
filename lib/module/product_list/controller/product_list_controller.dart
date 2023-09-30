@@ -33,7 +33,7 @@ class ProductListController extends State<ProductListView> {
     var faker = Faker.instance;
     await ProductService.create(
       productName: faker.commerce.productName(),
-      price: 100,
+      price: (Random().nextInt(100) + 10),
     );
     getProducts();
   }
